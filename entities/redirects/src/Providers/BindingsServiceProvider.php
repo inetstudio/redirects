@@ -36,6 +36,8 @@ class BindingsServiceProvider extends BaseServiceProvider implements DeferrableP
         'InetStudio\RedirectsPackage\Redirects\Contracts\Http\Responses\Back\Resource\StoreResponseContract' => 'InetStudio\RedirectsPackage\Redirects\Http\Responses\Back\Resource\StoreResponse',
         'InetStudio\RedirectsPackage\Redirects\Contracts\Http\Responses\Back\Resource\UpdateResponseContract' => 'InetStudio\RedirectsPackage\Redirects\Http\Responses\Back\Resource\UpdateResponse',
 
+        'InetStudio\RedirectsPackage\Redirects\Contracts\Listeners\RegenerateRoutesCacheListenerContract' => 'InetStudio\RedirectsPackage\Redirects\Listeners\RegenerateRoutesCacheListener',
+
         'InetStudio\RedirectsPackage\Redirects\Contracts\Models\RedirectModelContract' => 'InetStudio\RedirectsPackage\Redirects\Models\RedirectModel',
 
         'InetStudio\RedirectsPackage\Redirects\Contracts\Services\Back\DataTables\IndexServiceContract' => 'InetStudio\RedirectsPackage\Redirects\Services\Back\DataTables\IndexService',

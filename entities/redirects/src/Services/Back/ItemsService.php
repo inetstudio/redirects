@@ -9,8 +9,4 @@ use InetStudio\RedirectsPackage\Redirects\Contracts\Services\Back\ItemsServiceCo
 
 class ItemsService extends BaseItemsService implements ItemsServiceContract
 {
-    public function getAllItems()
-    {
-        return $this->model::all();
-    }
 }
