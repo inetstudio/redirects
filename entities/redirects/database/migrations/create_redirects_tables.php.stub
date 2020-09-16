@@ -1,0 +1,24 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateRedirectsTables extends Migration
+{
+    public function up()
+    {
+        Schema::create('redirects', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('uri', 1024);
+            $table->string('destination', 1024);
+            $table->integer('status')->default(302);
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('redirects');
+    }
+}

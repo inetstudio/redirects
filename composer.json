@@ -1,0 +1,30 @@
+{
+  "name": "inetstudio/redirects",
+  "description": "Package for redirects",
+  "homepage": "https://github.com/inetstudio/redirects",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Konstantin Bukin",
+      "email": "bukin@inetstudio.ru"
+    }
+  ],
+  "require": {
+    "inetstudio/admin-panel": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "InetStudio\\RedirectsPackage\\": "package/src",
+      "InetStudio\\RedirectsPackage\\Redirects\\": "entities/redirects/src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "InetStudio\\RedirectsPackage\\Providers\\ServiceProvider",
+        "InetStudio\\RedirectsPackage\\Redirects\\Providers\\BindingsServiceProvider",
+        "InetStudio\\RedirectsPackage\\Redirects\\Providers\\ServiceProvider"
+      ]
+    }
+  }
+}
