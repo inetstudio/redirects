@@ -1,12 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
 
-$redirectsService = resolve('InetStudio\RedirectsPackage\Redirects\Contracts\Services\ItemsServiceContract');
-$redirects = $redirectsService->getAllItems();
+if (Schema::hasTable('redirects')) {
+    $redirectsService = resolve('InetStudio\RedirectsPackage\Redirects\Contracts\Services\ItemsServiceContract');
+    $redirects = $redirectsService->getAllItems();
 
-foreach ($redirects as $redirect) {
-    Route::redirect($redirect['uri'], $redirect['destination'], $redirect['status']);
+    foreach ($redirects as $redirect) {
+        Route::redirect($redirect['uri'], $redirect['destination'], $redirect['status']);
+    }
 }
 
 Route::group(
